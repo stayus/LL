@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Torneio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro do Torneio</h1>
+        <form id="tournamentForm">
+            <label for="tournamentName">Nome do Torneio:</label>
+            <input type="text" id="tournamentName" name="tournamentName" required>
+            <label for="participantsCount">Quantidade de Participantes (mín. 4):</label>
+            <input type="number" id="participantsCount" name="participantsCount" min="4" required>
+            <label for="adminName">Nome do Administrador:</label>
+            <input type="text" id="adminName" name="adminName" required>
+            <div id="participantsContainer"></div>
+            <button type="submit">Cadastrar Torneio</button>
+        </form>
+        <div id="existingTournaments"></div>
+    </div>
+</body>
+</html>
